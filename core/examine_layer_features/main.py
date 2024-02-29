@@ -19,9 +19,15 @@ if layer.isValid():
     features = layer.getFeatures()
 
     for feature in features:
-        # print(feature.attributeMap())
-        # print(feature.attributes(), feature.attributeCount())
         print(feature.attribute("DISTRICT"), feature.hasGeometry(), feature.geometry())
+        #     print(
+        #     feature.attributeMap(),
+        #     feature.attributes(),
+        #     feature.attribute("DISTRICT"),
+        #     feature.attributeCount(),
+        #     feature.hasGeometry(),
+        #     feature.geometry(),
+        #     )
     print("valid")
 
 else:
