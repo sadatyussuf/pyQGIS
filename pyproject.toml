@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pyqgis-projects"
+version = "0.1.0"
+description = ""
+authors = ["sadatyussuf <tommyleespartan0@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pyqgis_projects"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+flake8 = "^6.1.0"
+flake8-qgis = "^1.0.0"
+black = "^23.9.0"
+rich = "^13.6.0"
+icecream = "^2.1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
