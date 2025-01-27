@@ -43,7 +43,7 @@ if layer.isValid():
     # This part retrieves features from the layer based on the specified QgsFeatureRequest. It returns an iterator over the features that falls within the boundary of our buffered point
     get_features = layer.getFeatures(filter_request)
 
-    selected_features = [{f.id(): f.attribute("DISTRICT")} for f in get_features]
+    selected_features = [{f.id(): f.attribute("DISTRICT")} for f in get_features]  # type: ignore
 
     print(
         f"Points within {buffer_distance} units of the reference point: {selected_features}"

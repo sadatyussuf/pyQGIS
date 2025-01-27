@@ -1,4 +1,5 @@
 {
+    "python.envFile": "${workspaceFolder}/.env",
     "editor.formatOnSave": true,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
@@ -9,15 +10,46 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
-    "python.defaultInterpreterPath": "c:\\Program Files\\QGIS 3.22.11\\apps\\Python39\\python3qgis.exe",
-    "python.autoComplete.extraPaths": [
-         "C:\\Program Files\\QGIS 3.22.11\\apps\\qgis-ltr\\python",
-    ],
-    "cSpell.words": [
-        "Geopackage",
-        "gpkg",
-        "qgis",
-        "shapefiles"
-    ],
+    // "python.defaultInterpreterPath": "c:\\Program Files\\QGIS 3.22.11\\apps\\Python312\\python3qgis.exe",
+    // "python.autoComplete.extraPaths": [
+        //      "C:\\Program Files\\QGIS 3.22.11\\apps\\qgis-ltr\\python",
+        // ],
+    // "python.defaultInterpreterPath": "C:/OSGeo4W/apps/Python312;C:/OSGeo4W/apps/Python312/DLLs;C:/OSGeo4W/apps/Python312/Lib;",
+    // "python.defaultInterpreterPath": "C:\\OSGeo4W\\apps\\Python312\\python.exe",
+    "python.defaultInterpreterPath": "C:\\OSGeo4W\\apps\\Python312\\python.exe",
+    "terminal.integrated.env.windows": {
+    //     "OSGEO4W_ROOT": "C:\\OSGeo4W", 
+    //     "PATH":"C:\\OSGeo4W\\apps\\qt5\\bin;C:\\OSGeo4W\\apps\\Python312\\Scripts;C:\\OSGeo4W\\apps\\qgis\\bin;C:\\OSGeo4W\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\WBem",
+    //     "GDAL_DATA": "C:\\OSGeo4W\\share\\gdal", 
+    //     "GDAL_DRIVER_PATH": "C:\\OSGeo4W\\bin\\gdalplugins", 
+    //     "GS_LIB": "C:\\OSGeo4W\\apps\\gs\\lib", 
+    //     "JPEGMEM": "1000000", 
+    //     "OPENSSL_ENGINES": "C:\\OSGeo4W\\lib\\engines-1_1", 
+    //     "SSL_CERT_FILE": "C:\\OSGeo4W\\bin\\curl-ca-bundle.crt", 
+    //     "SSL_CERT_DIR": "C:\\OSGeo4W\\apps\\openssl\\certs", 
+        "PROJ_LIB": "C:\\OSGeo4W\\share\\proj", 
+    //     "QT_PLUGIN_PATH": "C:\\OSGeo4W\\apps\\Qt5\\plugins", 
 
+    //     "O4W_QT_PREFIX": "C:/OSGeo4W/apps/Qt5", 
+    //     "O4W_QT_BINARIES": "C:/OSGeo4W/apps/Qt5/bin", 
+    //     "O4W_QT_PLUGINS": "C:/OSGeo4W/apps/Qt5/plugins", 
+    //     "O4W_QT_LIBRARIES": "C:/OSGeo4W/apps/Qt5/lib", 
+    //     "O4W_QT_TRANSLATIONS": "C:/OSGeo4W/apps/Qt5/translations",
+    //     "O4W_QT_HEADERS": "C:/OSGeo4W/apps/Qt5/include", 
+    //     "O4W_QT_DOC": "C:/OSGeo4W/apps/Qt5/doc", 
+
+    //     "PYTHONHOME": "C:\\OSGeo4W\\apps\\Python312", 
+    //     "PYTHONPATH": "C:\\OSGeo4W\\apps\\qgis\\python;C:\\OSGeo4W\\apps\\qgis\\python\\plugins",
+    //     "PYTHONUTF8": "1",
+
+    },
+
+    "python.autoComplete.extraPaths": ["C:\\OSGeo4W\\apps\\qgis\\python","C:\\OSGeo4W\\apps\\qgis\\python\\plugins"],
+    "python.pythonPath": "c:\\OSGeo4W\\bin\\python.exe",
+    "python.analysis.extraPaths": [
+        "C:\\OSGeo4W\\apps\\qgis\\bin",
+        "C:\\OSGeo4W\\apps\\qgis\\python",
+        "C:\\OSGeo4W\\apps\\qgis\\python\\plugins",
+        "C:\\Users\\anwur\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\processing\\scripts",
+    ]
 }
