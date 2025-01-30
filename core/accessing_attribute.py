@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from qgis.core import QgsApplication, QgsVectorLayer
 
 # Supply path to qgis install location default path =
@@ -17,27 +19,32 @@ path_to_shapefile = "G:/My Drive/GIS/vector_files/Ghana/district/Districts_Ghana
 layer = QgsVectorLayer(path_to_shapefile, "District Capitals Shapefile", "ogr")
 
 
+# ----------- Main Code: Accessing Attribute Data ----------------
+
+
 if layer.isValid():
     print(layer.name())
-    fields = layer.fields()
-    for field in fields:
-        print(field.name(), " | ", field.typeName())
-    # features = layer.getFeatures()
-    # for feature in features:  # type: ignore
 
-    #     # # Getting attribute as a dictornary
-    #     # print(feature.attributeMap())
+    features = layer.getFeatures()
 
-    #     # # Getting attribute values as a list
-    #     # print(feature.attributes())
+    for feature in features:  # type: ignore
 
-    #     # Getting attribute values by name
-    #     print(feature["REGION"], " | ", feature["CAPITAL"], " | ", feature["DISTRICT"])
+        #  Getting attribute as a dictornary
+        # pprint(feature.attributeMap())
 
-    #     # # Getting attribute values by index
-    #     # print(feature[10], " | ", feature[1], " | ", feature[5])
+        # Getting attribute values as a list
+        # print(feature.attributes())
+
+        # Getting attribute values by name
+        print(
+            f"{feature['REGION']:<15} | {feature['CAPITAL']:<15} | {feature['DISTRICT']:<15}"
+        )
+
+
 else:
     print("can't load layer")
+
+# ----------- Main Code: Accessing Attribute Data ----------------
 
 
 # Finally, exitQgis() is called to remove the
