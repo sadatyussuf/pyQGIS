@@ -21,7 +21,7 @@ qgs.initQgis()
 # path_to_shapefile = "G:/My Drive/GIS/vector_files/Ghana/district/Districts_Ghana.shp"
 path_to_shapefile = "G:/My Drive/GIS/vector_files/Ghana/POI_Ghana.shp"
 
-layer = QgsVectorLayer(path_to_shapefile, "District Capitals Shapefile", "ogr")
+layer = QgsVectorLayer(path_to_shapefile, "POI Ghana", "ogr")
 
 #################### Put your main code below ####################
 
@@ -73,6 +73,26 @@ if layer.isValid():
 
         # if feature_geom.isGeosValid():
         #     print("Geometry is valid")
+
+        # ======================================================
+        # SECTION: Get Coordinates of each Feature
+        # ======================================================
+
+        # print(feature_geom)  # eg. QgsGeometry: Point (718843.34203567157965153 1238674.98031778843142092)>
+
+        # print(feature_geom.asWkt()) # eg. Point (718843.3420356716 1238674.9803177884)
+
+        # print(feature_geom.asJson()) # eg. {"type": "Point", "coordinates": [718843.3420356716, 1238674.9803177884]}
+
+        # print(
+        #     feature_geom.asPoint()
+        # )  # eg. QgsPointXY(718843.3420356716, 1238674.9803177884)
+        # print(feature_geom.asMultiPoint()) # for multi-point geometries
+        # print(feature_geom.asPolyline()) # for line geometries
+        # print(feature_geom.asMultiPolyline()) # for multi-line geometries
+        # print(feature_geom.asPolygon()) # for polygon geometries
+        # print(feature_geom.asMultiPolygon()) # for multi-polygon geometries
+
 
 else:
     print("can't load layer")
